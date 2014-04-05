@@ -57,7 +57,7 @@ def add_petal(size,tint_factor,angle=0):
 
 petal_size = 8
 num_petals = 256 
-petal_size_multipler = 8
+petal_size_multipler = 6
 
 def lerp(a,b,f):
     return a + (b-a)*f
