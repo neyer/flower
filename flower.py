@@ -24,16 +24,12 @@ flower_draw.line([(size_x/2,size_y),
                    petals_origin],
           width=8,fill=green)
 
-def add_petal(size,angle=0):
+def add_petal(size,tint_factor,angle=0):
 
     px,py = petals_origin
     r,g,b,a = pink
 
-    this_scale = float(size)/petal_size
-    tint_factor = (random.random()*0.1 + 0.7)*((this_scale)**1.8181818181818181)
-
-    print tint_factor
-
+    
     fill_color = (int(r*tint_factor),
                   int(g*tint_factor),
                   int(b*tint_factor), a)
@@ -64,11 +60,13 @@ num_petals = 128
 
 def lerp(a,b,f):
     return a + (b-a)*f
+
 for x in xrange(num_petals):
     # this magic angle shows up in a bunch of flowers
     # i hear there is math involved
     progress_frac = x/float(num_petals)
     size = int(lerp(petal_size*4,petal_size,progress_frac))
-    add_petal(size,137.5*x)
+    tint_factor =  lerp(3,0.85,progress_frac)
+    add_petal(size,tint_factor,137.5*x)
 flower_image.show()
 flower_image.save("petal-%d-progress.png" % time.time())
