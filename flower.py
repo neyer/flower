@@ -9,7 +9,6 @@ import random
 green = (13,121,34)
 pink=(255,68,235,255)
 
-petal_size = 16 
 
 
 flower_image = Image.open("mark-icon.png")
@@ -56,7 +55,9 @@ def add_petal(size,tint_factor,angle=0):
                             py-y_offset-sy/2),
                        mask=rotated)
 
-num_petals = 128
+petal_size = 8
+num_petals = 256 
+petal_size_multipler = 8
 
 def lerp(a,b,f):
     return a + (b-a)*f
@@ -65,7 +66,8 @@ for x in xrange(num_petals):
     # this magic angle shows up in a bunch of flowers
     # i hear there is math involved
     progress_frac = x/float(num_petals)
-    size = int(lerp(petal_size*4,petal_size,progress_frac))
+    size = int(lerp(petal_size*petal_size_multipler,
+                    petal_size,progress_frac))
     tint_factor =  lerp(3,0.85,progress_frac)
     add_petal(size,tint_factor,137.5*x)
 flower_image.show()
