@@ -5,6 +5,15 @@ from PIL import ImageDraw
 import time
 import random
 
+# set up the random number generator using this file's source
+# i love you baby, we are together now, and our signatures in all spaces
+# reconstructed in far away places 
+# cannot be separated
+# it just woulnd't make any sense otherhow! 
+
+seed_body = ""
+with open(__file__, 'r') as corpus:
+    sead_body = corpus.read()
 
 green = (13,121,34)
 pink=(255,68,235,255)
@@ -13,6 +22,10 @@ pink=(255,68,235,255)
 
 flower_image = Image.open("mark-icon.png")
 flower_image = flower_image.convert('RGBA') 
+
+
+seed_body += str(list(flower_image.getdata()))
+random.seed(seed_body)
 
 size_x, size_y = flower_image.size
 
