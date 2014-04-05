@@ -55,7 +55,7 @@ def add_petal(size,tint_factor,angle=0):
                             py-y_offset-sy/2),
                        mask=rotated)
 
-petal_size = 12 
+petal_size = 9
 num_petals = 99
 petal_size_multipler = 6
 
