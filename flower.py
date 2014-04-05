@@ -10,6 +10,7 @@ green = (13,121,34)
 pink=(255,68,235,255)
 
 petal_size = 32
+petal_ratio = 5
 
 
 flower_image = Image.open("mark-icon.png")
@@ -42,6 +43,7 @@ def add_petal(size,angle=0):
                                      size),
                                     color=(255,255,255,0))
     petal_draw = ImageDraw.Draw(petal_image)
+
 
     petal_draw.ellipse([0,size/4,
                         size,size*3/4],
