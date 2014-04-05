@@ -66,7 +66,7 @@ for x in xrange(num_petals):
     # this magic angle shows up in a bunch of flowers
     # i hear there is math involved
     progress_frac = x/float(num_petals)
-    size = int(lerp(petal_size*petal_size_multipler,
+    size = int(lerp(petal_size*petal_size_multiplier,
                     petal_size,progress_frac))
     tint_factor =  lerp(3,0.85,progress_frac)
     add_petal(size,tint_factor,137.5*x)
