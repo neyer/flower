@@ -31,7 +31,7 @@ def add_petal(size,angle=0):
     r,g,b,a = pink
 
     this_scale = float(size)/petal_size
-    tint_factor = (random.random()*0.3 + 0.7)*((this_scale)**1.8181818181818181)
+    tint_factor = (random.random()*0.1 + 0.7)*((this_scale)**1.8181818181818181)
 
     print tint_factor
 
