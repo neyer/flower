@@ -56,7 +56,7 @@ def add_petal(size,tint_factor,angle=0):
                        mask=rotated)
 
 petal_size = 8
-num_petals = 256 
+num_petals = 99
 petal_size_multipler = 6
 
 def lerp(a,b,f):
