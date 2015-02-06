@@ -13,7 +13,7 @@ import random
 
 seed_body = ""
 with open(__file__, 'r') as corpus:
-    sead_body = corpus.read()
+    seed_body = corpus.read()
 
 green = (13,121,34)
 pink=(255,68,235,255)
