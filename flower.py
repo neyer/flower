@@ -71,7 +71,7 @@ def add_petal(petals_origin,color, size,tint_factor,angle=0):
                        mask=rotated)
 
 petal_size = 11 
-allie_petal_size = 7
+allie_petal_size = 8
 num_petals = 99
 petal_size_multiplier = 5
 
