@@ -17,6 +17,7 @@ with open(__file__, 'r') as corpus:
 
 green = (13,121,34)
 pink=(255,68,235,255)
+blueish=(68,68,235,255)
 
 
 
@@ -32,15 +33,15 @@ size_x, size_y = flower_image.size
 flower_draw = ImageDraw.Draw(flower_image)
 
 mom_petals_origin = (3*size_x/4, size_y/3)
-allie_petals_origin = (3*size_x/4, 3*size_y/4)
+allie_petals_origin = (4*size_x/5, 3*size_y/4)
 flower_draw.line([(size_x/2,size_y),
                    mom_petals_origin],
           width=8,fill=green)
 
-def add_petal(petals_origin, size,tint_factor,angle=0):
+def add_petal(petals_origin,color, size,tint_factor,angle=0):
 
     px,py = petals_origin
-    r,g,b,a = pink
+    r,g,b,a = color 
 
     
     fill_color = (int(r*tint_factor),
@@ -83,7 +84,7 @@ for x in xrange(num_petals):
     size = int(lerp(petal_size*petal_size_multiplier,
                     petal_size,progress_frac))
     tint_factor =  lerp(3,0.85,progress_frac)
-    add_petal(mom_petals_origin, size,tint_factor,137.5*x)
+    add_petal(mom_petals_origin,color, size,tint_factor,137.5*x)
 
 for x in xrange(num_petals):
     # this magic angle shows up in a bunch of flowers
@@ -92,7 +93,7 @@ for x in xrange(num_petals):
     size = int(lerp(petal_size*petal_size_multiplier,
                     petal_size,progress_frac))
     tint_factor =  lerp(3,0.85,progress_frac)
-    add_petal(allie_petals_origin, size,tint_factor,137.5*x)
+    add_petal(allie_petals_origin, color, size,tint_factor,137.5*x)
 
 
 
