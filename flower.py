@@ -33,7 +33,7 @@ size_x, size_y = flower_image.size
 flower_draw = ImageDraw.Draw(flower_image)
 
 mom_petals_origin = (3*size_x/4, size_y/3)
-allie_petals_origin = (4*size_x/5, 3*size_y/4)
+allie_petals_origin = (4*size_x/5, size_y/2.0)
 flower_draw.line([(size_x/2,size_y),
                    mom_petals_origin],
           width=8,fill=green)
@@ -92,7 +92,7 @@ for x in xrange(num_petals):
     progress_frac = x/float(num_petals)
     size = int(lerp(petal_size*petal_size_multiplier,
                     petal_size,progress_frac))
-    tint_factor =  lerp(3,0.85,progress_frac)
+    tint_factor =  lerp(2,0.85,progress_frac)
     add_petal(allie_petals_origin, blueish, size,tint_factor,137.5*x)
 
 
