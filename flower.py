@@ -37,6 +37,11 @@ allie_petals_origin = (4*size_x/5, 2*size_y/3)
 flower_draw.line([(size_x/2,size_y),
                    mom_petals_origin],
           width=8,fill=green)
+flower_draw.line([(size_x/2,size_y),
+                   allie_petals_origin],
+          width=6,fill=(207,190,255))
+
+
 
 def add_petal(petals_origin,color, size,tint_factor,angle=0):
 
