@@ -92,7 +92,7 @@ for x in xrange(num_petals):
     progress_frac = x/float(num_petals)
     size = int(lerp(petal_size*petal_size_multiplier,
                     petal_size,progress_frac))
-    tint_factor =  lerp(2,0.85,progress_frac)
+    tint_factor =  lerp(1,0.85,progress_frac)
     add_petal(allie_petals_origin, blueish, size,tint_factor,137.5*x)
 
 
