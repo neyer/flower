@@ -71,6 +71,7 @@ def add_petal(petals_origin,color, size,tint_factor,angle=0):
                        mask=rotated)
 
 petal_size = 11 
+allie_petal_size = 6
 num_petals = 99
 petal_size_multiplier = 5
 
@@ -90,9 +91,9 @@ for x in xrange(num_petals/2):
     # this magic angle shows up in a bunch of flowers
     # i hear there is math involved
     progress_frac = x/float(num_petals)
-    size = int(lerp(petal_size*petal_size_multiplier,
-                    petal_size,progress_frac))
-    tint_factor =  lerp(1,0.75,progress_frac)
+    size = int(lerp(allie_petal_size*petal_size_multiplier,
+                    allie_petal_size,progress_frac))
+    tint_factor =  lerp(4,0.75,progress_frac)
     add_petal(allie_petals_origin, blueish, size,tint_factor,137.5*x)
 
 
