@@ -33,7 +33,7 @@ size_x, size_y = flower_image.size
 flower_draw = ImageDraw.Draw(flower_image)
 
 mom_petals_origin = (3*size_x/4, size_y/3)
-allie_petals_origin = (4*size_x/5, size_y/2)
+allie_petals_origin = (4*size_x/5, 2*size_y/3)
 flower_draw.line([(size_x/2,size_y),
                    mom_petals_origin],
           width=8,fill=green)
@@ -71,7 +71,7 @@ def add_petal(petals_origin,color, size,tint_factor,angle=0):
                        mask=rotated)
 
 petal_size = 11 
-allie_petal_size = 6
+allie_petal_size = 7
 num_petals = 99
 petal_size_multiplier = 5
 
